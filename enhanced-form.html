@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced HTML5 Content & Mastering Forms</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2rem; background: #f9f9f9; color: #222; }
+        header, main, section, footer { margin-bottom: 2rem; }
+        header { border-bottom: 2px solid #ccc; padding-bottom: 1rem; }
+        h1, h2, h3 { color: #2a4d69; }
+        table { border-collapse: collapse; width: 100%; margin-bottom: 1rem; }
+        th, td { border: 1px solid #bbb; padding: 0.5rem 1rem; text-align: left; }
+        th { background: #e3eaf2; }
+        fieldset { border: 1px solid #2a4d69; margin-bottom: 1rem; padding: 1rem; }
+        legend { font-weight: bold; color: #2a4d69; }
+        label { display: block; margin-top: 1rem; }
+        input, select, textarea { width: 100%; padding: 0.5rem; margin-top: 0.25rem; border: 1px solid #bbb; border-radius: 4px; }
+        input[type="checkbox"], input[type="radio"] { width: auto; }
+        .form-section { margin-bottom: 2rem; }
+        .media { display: flex; gap: 2rem; align-items: center; }
+        .media img, .media video, .media audio { max-width: 300px; border-radius: 8px; }
+        button { background: #2a4d69; color: #fff; border: none; padding: 0.75rem 2rem; border-radius: 4px; font-size: 1rem; cursor: pointer; }
+        button:hover { background: #1e3550; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HTML5 Content Enhancement & Form Mastery</h1>
+        <p>Demonstrating advanced HTML5 content elements and a complete, accessible form with native validation.</p>
+    </header>
+    <main>
+        <section aria-labelledby="lists-section">
+            <h2 id="lists-section">Organizing Content with Lists</h2>
+            <h3>Favorite Programming Languages (Ordered List)</h3>
+            <ol>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>Java</li>
+                <li>Go</li>
+                <li>Rust</li>
+            </ol>
+            <h3>Web Technologies (Unordered List)</h3>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript (ES6+)</li>
+                <li>WebAssembly</li>
+                <li>Progressive Web Apps</li>
+            </ul>
+            <h3>Steps to Build a Web Form (Description List)</h3>
+            <dl>
+                <dt>Plan</dt>
+                <dd>Define the purpose and required fields.</dd>
+                <dt>Structure</dt>
+                <dd>Use semantic HTML elements for clarity and accessibility.</dd>
+                <dt>Validate</dt>
+                <dd>Apply HTML5 validation attributes to ensure correct input.</dd>
+                <dt>Style</dt>
+                <dd>Enhance usability and appearance with CSS.</dd>
+            </dl>
+        </section>
+        <section aria-labelledby="table-section">
+            <h2 id="table-section">Sample Table: Web Browser Comparison</h2>
+            <table>
+                <caption>Popular Web Browsers (2025)</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Browser</th>
+                        <th scope="col">Developer</th>
+                        <th scope="col">Engine</th>
+                        <th scope="col">Open Source</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Chrome</td>
+                        <td>Google</td>
+                        <td>Blink</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Firefox</td>
+                        <td>Mozilla</td>
+                        <td>Gecko</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Edge</td>
+                        <td>Microsoft</td>
+                        <td>Blink</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Safari</td>
+                        <td>Apple</td>
+                        <td>WebKit</td>
+                        <td>No</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section aria-labelledby="media-section">
+            <h2 id="media-section">Media Embedding</h2>
+            <div class="media">
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Code on a laptop screen" />
+                    <figcaption>Sample coding workspace (Unsplash)</figcaption>
+                </figure>
+                <figure>
+                    <audio controls>
+                        om/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                        Your browser does not <source src="https://www.soundhelix.csupport the audio element.
+                    </audio>
+                    <figcaption>Sample Audio: SoundHelix Song</figcaption>
+                </figure>
+                <figure>
+                    <video controls width="250">
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <figcaption>Sample Video: Big Buck Bunny</figcaption>
+                </figure>
+            </div>
+        </section>
+        <section aria-labelledby="form-section" class="form-section">
+            <h2 id="form-section">Contact & Registration Form</h2>
+            <form action="#" method="post" autocomplete="on" novalidate>
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="fullname">Full Name *</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="e.g. Jane Doe" required minlength="3" autocomplete="name">
+
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="e.g. jane@example.com" required autocomplete="email">
+
+                    <label for="dob">Date of Birth *</label>
+                    <input type="date" id="dob" name="dob" required>
+                </fieldset>
+                <fieldset>
+                    <legend>Account Details</legend>
+                    <label for="username">Username *</label>
+                    <input type="text" id="username" name="username" required pattern="^[a-zA-Z0-9_]{5,15}$" minlength="5" maxlength="15" placeholder="5-15 letters, numbers, or _">
+
+                    <label for="password">Password *</label>
+                    <input type="password" id="password" name="password" required minlength="8" placeholder="At least 8 characters" autocomplete="new-password">
+
+                    <label for="confirm-password">Confirm Password *</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required minlength="8" placeholder="Re-enter password" autocomplete="new-password">
+                </fieldset>
+                <fieldset>
+                    <legend>Preferences</legend>
+                    <label for="fav-lang">Favorite Language</label>
+                    <select id="fav-lang" name="fav-lang" required>
+                        <option value="">--Please choose--</option>
+                        <option value="python">Python</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="java">Java</option>
+                        <option value="go">Go</option>
+                        <option value="rust">Rust</option>
+                    </select>
+
+                    <label>Subscribe to newsletter?</label>
+                    <input type="checkbox" id="newsletter" name="newsletter" checked readonly>
+                    <label for="newsletter" style="display:inline;">Yes, sign me up!</label>
+
+                    <label>Gender</label>
+                    <input type="radio" id="gender-male" name="gender" value="male" required>
+                    <label for="gender-male" style="display:inline;">Male</label>
+                    <input type="radio" id="gender-female" name="gender" value="female">
+                    <label for="gender-female" style="display:inline;">Female</label>
+                    <input type="radio" id="gender-other" name="gender" value="other">
+                    <label for="gender-other" style="display:inline;">Other</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Additional Comments</legend>
+                    <label for="comments">Comments</label>
+                    <textarea id="comments" name="comments" rows="4" maxlength="300" placeholder="Your feedback or questions..."></textarea>
+                </fieldset>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 HTML5 Enhancement Assignment. All rights reserved.</p>
+    </footer>
+</body>
+</html>
